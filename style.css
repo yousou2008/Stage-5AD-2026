@@ -6,7 +6,9 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    background-image: url('images/pexels-pixabay-326311.jpg');
+    /*background-image: url('images/pexels-pixabay-326311.jpg');*/
+    background: #011701;
+    background-image: none;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
@@ -29,11 +31,15 @@ b {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;          
-    min-height: 20vh;
+    padding: 0 32px;
+    height: 70;
+    min-height: auto;
     flex-wrap: wrap;
-    background: rgba(50, 80, 0, 0.85);  
-    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 10, 0.95);  
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
     margin: 10px;
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.2); 
@@ -41,48 +47,104 @@ b {
 .toRight{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-self: center;
+    gap: 0px;
 }
 
-.tasteKingPizza {
-    padding-left: 10px;
-    padding-bottom: 20px;
+.tasteKingPizza img{
+    height: 150px;
+    width: auto;
+    display: block;
 }
 
 .menuLink {
-    font-size: clamp(12px, 1.5vw, 20px);
+    font-size: clamp(13px, 1.8vw, 15px);
+    font-weight: 400;
+    text-transform: uppercase;
     display: flex;
     align-self: center;
-    padding-right: 40px;
+    padding: 8px 16px;
+    color: rgba(255,255,255,0.6);
+    border-radius: 8px;
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+    font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;           
     padding: 0 10px;
+}
+.menuLink:hover {
+    background: white;
+    background: rgba(255,255,255,0.06);
+    transition: 1s;
+    border-radius: 100px;
+}
+.navCta {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 9px 20px;
+    background: #4a7a00;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.2s;
     white-space: nowrap;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+.navCta:hover {
+    background: #5c9600;
 }
 
-/* KAARTEN */
+/* KAARTEN
 .openingsUren, .deliveryZones, .infoContainer {
-    background: rgba(30, 50, 0, 0.75);   
     backdrop-filter: blur(12px);         
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 20px;
+    border-right: 1px solid rgba(255,255,255,0.15);
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     color: white;
-    transition: transform 0.2s;
-    cursor: default;
-}
-
-.openingsUren:hover, .deliveryZones:hover, .infoContainer:hover {
-    transform: translateY(-5px);
-}
-
+}*/
 .openingsUren {
     display: flex;
     flex-direction: column;
-    padding: 15px 20px;           
+    justify-content: center;
+    padding: 60px 48px;      
     flex: 1;
-    max-width: 400px;
+    border-right: 0.5px solid rgba(255,255,255,0.08);
+    max-width: none;
 }
-
+.dagRij {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.06);
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: rgba(255,255,255,0.85);
+}
+.dagRij span:last-child {
+    color: #4a7a00;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.fotoKant {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 40px 32px;
+    justify-content: center;
+}
+.fotoKant .rounded {
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.pageLayout {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 70px);
+}
 .deliveryZones {
     display: flex;
     flex-direction: column;
@@ -111,22 +173,6 @@ b {
     margin-bottom: 10px;
 }
 
-.containerForAllContainers {
-    display: flex;
-    flex-direction: column;
-    width: 60%;                    
-    margin: 0 auto;
-    padding: 20px 0;               
-    gap: 20px;
-}
-
-.nextToEachother {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-}
-
 .margin {
     margin-bottom: 0;              
 }
@@ -143,11 +189,30 @@ body::before {
     background: rgba(0,0,0,0.4); 
     z-index: -1;
 }
+.imageBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.rounded{
+    border-radius: 20px;
+    object-fit: cover;
+    width: 48%;
+    max-width: 100%;
+}
+
 /* Grote schermen */
 @media (max-width: 1200px) {
     .containerForAllContainers {
         width: 75%;
     }
+    
 }
 
 /* Tablet */
@@ -162,6 +227,18 @@ body::before {
 
 /* Kleine tablet / grote telefoon */
 @media (max-width: 768px) {
+    .navigatiebalk{
+        padding: 0 16px;
+        height: 60px;
+    }
+    .menuLink{
+        font-size: 11px;
+        padding: 6px 10px;
+        letter-spacing: 1px;
+    }
+    .navCta {
+        display: none; /* verberg op tablet */
+    }
     .containerForAllContainers {
         width: 95%;
     }
@@ -169,12 +246,37 @@ body::before {
         width: 90%;
     }
     .nextToEachother {
+        display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .pageLayout {
+        flex-direction: column;
+    }
+    .openingsUren {
+        padding: 40px 24px;
+        border-right: none;
+        border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    }
+    .fotoKant {
+        padding: 24px;
+    }
+    .fotoKant .rounded {
+        height: auto;
     }
     .openingsUren, .deliveryZones {
         width: 90%;
         max-width: none;
+    }
+    .imageBox{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+    .rounded{
+        width: 90%;
+        max-width: 100%;
     }
     b {
         font-size: clamp(20px, 6vw, 50px);
@@ -184,11 +286,35 @@ body::before {
 /* Telefoon */
 @media (max-width: 480px) {
     .navigatiebalk {
-        padding: 0 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 16px;
+        gap: 10px;
+        height: auto;
+        min-height: auto;}
+        .tasteKingPizza img{
+        height: 60px;
+        }
+    .rounded{
+        width: 90%;
+        max-width: 100%
+    }
+    .toRight {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
     }
     .menuLink {
-        padding-right: 10px;
-        font-size: 16px;
+        font-size: 11px;
+        padding: 6px 10px;
+        letter-spacing: 0;
+        background: rgba(255,255,255,0.05);
+        border: 0.5px solid rgba(255,255,255,0.1);
+        border-radius: 6px;
+        color: rgba(255,255,255,0.7);
     }
     .infoContainer, .openingsUren, .deliveryZones {
         font-size: clamp(12px, 3.5vw, 18px); /* tekst schaalt mee */
