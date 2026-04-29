@@ -6,25 +6,51 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo_465x320.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <title>Taste King Pizza Info</title>
+    <title>Taste King Pizza - Bestellen</title>
 </head>
 <body>
-    <nav class="navigatiebalk">
-    <a href="index.html" class="tasteKingPizza">
-        <img src="images/logo_465x320 (1).png" alt="tasteKingPizza">
-    </a>
-    <div class="toRight">
-        <a href="menu.html" class="menuLink">Menu</a>
-        <a href="Contact.html" class="menuLink">Contacteer ons</a>
-        <a href="Openingsuren.html" class="menuLink">Openingsuren</a>
-        <a href="DeliveryZones.html" class="menuLink">Delivery</a>
+    <nav id="navbar"></nav>
+
+    <div class="pageLayout">
+
+        <div class="contactLinks">
+            <p class="fontsize">Bestel Nu</p>
+            <p style="color: rgba(255,255,255,0.4); font-size: 14px; margin-bottom: 30px; letter-spacing: 1px;">Kies jouw platform <br> krijg het geleverd
+            </p>
+
+            <div class="dagRij">
+                <span>Telefoon</span>
+                <a href="tel:+015336060" class="bestelBtn">015 33 60 60</a>
+            </div>
+            <div class="dagRij">
+                <span>Deliveroo</span>
+                <a href="https://deliveroo.be/nl-be/menu/mechelen/centrum/taste-king-pizza" target="_blank" class="bestelBtn">Bestel →</a>
+            </div>
+            <div class="dagRij">
+                <span>Uber Eats</span>
+                <a href="https://www.ubereats.com/be-en/store/taste-king-pizza/eDv2JHKyXgS_x2Bzr3ZMTg?srsltid=AfmBOoor3YNMfI3z9lPceWub0S_1X88e3j3EQYMy7XPPcbpBPQJ9yGtE" target="_blank" class="bestelBtn">Bestel →</a>
+            </div>
+            <div class="dagRij">
+                <span>Takeaway</span>
+                <a href="https://www.takeaway.com/be-en/menu/taste-king-pizza-mechelen" target="_blank" class="bestelBtn">Bestel →</a>
+            </div>
+            <div class="dagRij">
+                <span>MyMenu</span>
+                <a href="https://www.mymenu.be/en/taste-king-pizza-mechelen" target="_blank" class="bestelBtn">Bestel →</a>
+            </div>
+        </div>
+
+        <div class="fotoKant" style="align-items: center; justify-content: center;">
+            <div class="infoCard">
+                <p class="fontsize" style="margin-bottom: 20px;">Afhalen</p>
+                <p style="color: rgba(255,255,255,0.6); line-height: 2;">Hoogstraat 33<br>2800 Mechelen</p>
+                <p style="color: rgba(255,255,255,0.4); font-size: 13px; margin-top: 20px;">Elke dag: 17:00 - 22:45</p>
+                <a href="tel:+015336060" class="navCta" style="margin-top: 30px; display: block; text-align: center;">Bel & Bestel</a>
+            </div>
+        </div>
+
     </div>
-    <a href="tel:+015336060" class="navCta">015 33 60 60</a>
-</nav>
-<span class="deliveryZones">
-    <p class="fontsize">Delivery zones</p>
-    <p>2800 Mechelen</p>
-    <p>2812 Muizen</p>
-    </span>
+
+    <script src="js.js"></script>
 </body>
 </html>
