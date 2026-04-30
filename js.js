@@ -290,6 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
 };
         const p = menu.pizzaPrijzen;
         const pa = menu.pastaPrijzen;
+        const pd = menu.pizzaPrijzenOpDinsdag
 
         //${} stopt js in html string
         //p.small haalt de waarde vanuit u obj
@@ -307,9 +308,9 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         document.getElementById("pizzaPrijzenOpDinsdag").innerHTML = `
             <br> <p class="blokTitel">Pizza's op dinsdag</p>
-            <div class="prijsRij"><span>Small</span><span>€${p.small.toFixed(2)}</span></div>
-            <div class="prijsRij"><span>Medium</span><span>€${p.medium.toFixed(2)}</span></div>
-            <div class="prijsRij"><span>Large</span><span>€${p.large.toFixed(2)}</span></div>
+            <div class="prijsRij"><span>Small</span><span>€${pd.small.toFixed(2)}</span></div>
+            <div class="prijsRij"><span>Medium</span><span>€${pd.medium.toFixed(2)}</span></div>
+            <div class="prijsRij"><span>Large</span><span>€${pd.large.toFixed(2)}</span></div>
         `;
 
         // Pasta prijzen
