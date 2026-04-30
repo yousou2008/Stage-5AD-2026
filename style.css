@@ -461,26 +461,26 @@ body::before {
         border-bottom: 0.5px solid rgba(255,255,255,0.08);
     }
     .menuWrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
     }
     #prijzenBlok { 
-        grid-column: 1; 
-        border-right: none; 
-        border-bottom: 0.5px solid rgba(255,255,255,0.08); 
-        position: static; 
+        position: static;
+        border-right: none;
+        border-bottom: 0.5px solid rgba(255,255,255,0.08);
+        padding: 24px 16px;
     }
     #menuItems { 
-        grid-column: 1; 
-        border-right: none; 
-        padding: 24px 16px; 
+        border-right: none;
+        padding: 24px 16px;
     }
     /* # is een id selector dus ge maakt geen nieuwe class aan maar ge voegt css op een bestaant id het kan maar 1 keer gebruikt worden*/
     #zonesBlok { 
-        grid-column: 1; 
-        border-top: 0.5px solid rgba(255,255,255,0.08); 
-        flex-direction: row; 
-        flex-wrap: wrap; }
+        border-top: 0.5px solid rgba(255,255,255,0.08);
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 24px 16px;
+        justify-content: flex-start; }
 }
 
 /* Telefoon */
