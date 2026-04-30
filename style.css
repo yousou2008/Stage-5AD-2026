@@ -260,6 +260,140 @@ body::before {
     width: 80%;
     max-width: 400px;
 }
+/* MENU PAGINA */
+.menuWrapper {
+    display: grid;
+    grid-template-columns: 220px 1fr 160px;
+    grid-template-rows: 1fr auto;
+    gap: 0;
+    min-height: calc(100vh - 90px);
+}
+
+#prijzenBlok {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 32px 24px;
+    border-right: 0.5px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 90px;
+    align-self: start;
+}
+
+#menuItems {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    padding: 32px 40px;
+    border-right: 0.5px solid rgba(255,255,255,0.08);
+    overflow-y: auto;
+}
+
+#zonesBlok {
+    grid-column: 3;
+    grid-row: 1;
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.blokTitel {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 12px;
+}
+
+.prijsRij {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+}
+
+.prijsRij span:last-child { 
+    color: #4a7a00; 
+    font-weight: 500; 
+}
+.prijsRij small { 
+    font-size: 11px; 
+    color: rgba(255,255,255,0.3); 
+    display: block; 
+}
+
+.sauzenRij { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 6px; 
+    margin-top: 8px; 
+}
+.sausTag { 
+    font-size: 11px; 
+    padding: 4px 10px; 
+    border: 0.5px solid rgba(255,255,255,0.1); 
+    border-radius: 4px; 
+    color: rgba(255,255,255,0.5); 
+}
+
+.toppingGrid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 6px; 
+    margin-top: 8px; 
+}
+.toppingTag { 
+    font-size: 11px; 
+    padding: 4px 10px; 
+    border: 0.5px solid rgba(255,255,255,0.08); 
+    border-radius: 4px; 
+    color: rgba(255,255,255,0.4); 
+}
+
+.categorieTitel {
+    font-size: clamp(18px, 2vw, 24px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.08);
+}
+
+.menuRij {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.05);
+}
+
+.itemNaam { 
+    font-size: 15px; 
+    letter-spacing: 0.5px; 
+}
+.itemDetail { 
+    font-size: 12px; 
+    color: rgba(255,255,255,0.35); 
+    margin-top: 3px; 
+}
+.itemPrijs { 
+    font-size: 15px; 
+    color: #4a7a00; 
+    font-weight: 500; 
+    white-space: nowrap; 
+    margin-left: 16px; }
+
+.zoneTag {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    border: 0.5px solid rgba(74,122,0,0.3);
+    border-radius: 8px;
+    color: #4a7a00;
+    text-align: center;
+}
 
 /* Grote schermen */
 @media (max-width: 1200px) {
@@ -326,6 +460,27 @@ body::before {
         border-right: none;
         border-bottom: 0.5px solid rgba(255,255,255,0.08);
     }
+    .menuWrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #prijzenBlok { 
+        grid-column: 1; 
+        border-right: none; 
+        border-bottom: 0.5px solid rgba(255,255,255,0.08); 
+        position: static; 
+    }
+    #menuItems { 
+        grid-column: 1; 
+        border-right: none; 
+        padding: 24px 16px; 
+    }
+    /* # is een id selector dus ge maakt geen nieuwe class aan maar ge voegt css op een bestaant id het kan maar 1 keer gebruikt worden*/
+    #zonesBlok { 
+        grid-column: 1; 
+        border-top: 0.5px solid rgba(255,255,255,0.08); 
+        flex-direction: row; 
+        flex-wrap: wrap; }
 }
 
 /* Telefoon */
