@@ -292,6 +292,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const pa = menu.pastaPrijzen;
         const pd = menu.pizzaPrijzenOpDinsdag
 
+        //const betekent een variable maken
+        // naam en prijs etc is om u dingen te benoemen als variable in u object
+        // = initializeerd de variable
+        // .pizzaPrijzen haalt info uit de objext in de array 
         //${} stopt js in html string
         //p.small haalt de waarde vanuit u obj
         //.tofixed(2) altijd twee nummers na de comma
@@ -310,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <br> <p class="blokTitel">Pizza's op dinsdag</p>
             <div class="prijsRij"><span>Small</span><span>€${pd.small.toFixed(2)}</span></div>
             <div class="prijsRij"><span>Medium</span><span>€${pd.medium.toFixed(2)}</span></div>
-            <div class="prijsRij"><span>Large</span><span>€${pd.large.toFixed(2)}</span></div>
+            <div class="prijsRij"><span>Large</span><span>€${pd  .large.toFixed(2)}</span></div>
         `;
 
         // Pasta prijzen
