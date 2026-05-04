@@ -178,7 +178,7 @@ Nadat je iets hebt aangepast, open je een terminal en typ je:
 
 ```bash
 git add .
-git commit -m "wat heb je veranderd"
+git commit -m "(tussen de aanhallings tekens schrijven wat u hebt aangepast)"
 git push
 ```
 
