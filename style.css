@@ -7,7 +7,7 @@
 body {
     font-family: 'Oswald', sans-serif;
     /*background-image: url('images/pexels-pixabay-326311.jpg');*/
-    background: #011701;
+    background: #033a03;
     background-image: none;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,6 +23,9 @@ a {
 
 b {
     font-size: clamp(20px, 4vw, 80px);
+}
+.smalltext{
+    font-size: clamp(10px, 1.5vw, 50px);
 }
 
 /* NAVIGATIEBALK */
@@ -274,7 +277,6 @@ body::before {
     grid-row: 1;
     padding: 32px 24px;
     border-right: 0.5px solid rgba(255,255,255,0.08);
-    position: sticky;
     top: 90px;
     align-self: start;
 }
@@ -352,12 +354,13 @@ body::before {
 }
 
 .categorieTitel {
-    font-size: clamp(18px, 2vw, 24px);
+    font-size: clamp(22px, 3vw, 32px); /* groter */
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 16px;
     padding-bottom: 10px;
     border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    color: #4ec83b; 
 }
 
 .menuRij {
