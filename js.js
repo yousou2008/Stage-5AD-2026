@@ -201,13 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="blokTitel" style="margin-top:16px;">Alle toppings</p>
         <div class="toppingGrid">${menu.toppings.map(t => `<span class="toppingTag">${t}</span>`).join("")}</div>
     `;
-
-    // delivery zones
-    document.getElementById("zonesBlok").innerHTML = `
-        <p class="blokTitel">Delivery Zones</p>
-        ${menu.deliveryZones.map(z => `<div class="zoneTag">${z}</div>`).join("")}
-    `;
-
     // pizza lijst
     document.getElementById("pizzaLijst").innerHTML = `
         <p class="categorieTitel">Pizza's</p>
