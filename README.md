@@ -1,28 +1,27 @@
-# Handleiding – Taste King Pizza Website
+# Taste King Pizza — Handleiding
 
-> Je hoeft geen programmeur te zijn om deze site aan te passen.  
-> Volg gewoon de stappen hieronder.
+Alles op deze site is makkelijk aanpasbaar, zelfs als ge nog nooit code hebt gezien.  
+Hieronder staat per onderwerp wat ge moet doen.
 
 ---
 
-## Welk bestand pas je aan?
+## Snel overzicht
 
-| Wat wil je aanpassen? | Open dit bestand |
+| Wat wil je aanpassen? | Bestand |
 |---|---|
-| Navigatiebalk, menu-items, prijzen, toppings | `js.js` |
-| Kleuren, lettergroottes, layout | `style.css` |
-| Tekst op de homepagina (foto's) | `index.html` |
-| Contactgegevens | `Contact.html` |
-| Openingsuren | `Openingsuren.html` |
-| Bestelplatformen | `DeliveryZones.html` |
-| Menukaart | `menu.html` |
+| Pizza's, pasta's, prijzen, toppings | [`js.js`](js.js) |
+| Kleuren, lettergroottes, layout | [`style.css`](style.css) |
+| Foto's op de homepagina | [`index.html`](index.html) |
+| Contactgegevens & social media | [`Contact.html`](Contact.html) |
+| Openingsuren | [`Openingsuren.html`](Openingsuren.html) |
+| Bestelplatformen (Deliveroo, Uber Eats...) | [`DeliveryZones.html`](DeliveryZones.html) |
+| Menukaart layout | [`menu.html`](menu.html) |
 
 ---
 
-## 1. Een pizza toevoegen of aanpassen (`js.js`)
+## Pizza's aanpassen
 
-Open `js.js` en zoek naar `pizza: [`.  
-Daaronder staan alle pizza's in dit formaat:
+Open [`js.js`](js.js) en zoek naar `pizza: [`. Elke pizza ziet er zo uit:
 
 ```js
 { 
@@ -31,67 +30,48 @@ Daaronder staan alle pizza's in dit formaat:
 },
 ```
 
-**Naam aanpassen:**  
-Verander de tekst tussen de aanhalingstekens na `naam:`.
+Naam of ingrediënten veranderen? Gewoon de tekst tussen de aanhalingstekens aanpassen.
 
-**Ingrediënten aanpassen:**  
-Verander de tekst tussen de aanhalingstekens na `ingredienten:`.
+Nieuwe pizza toevoegen? Kopieer zo'n blokje van `{` tot `},` en plak het eronder. Vergeet de komma niet aan het einde.
 
-**Nieuwe pizza toevoegen:**  
-Kopieer een blokje van `{` tot en met `},` en plak het onder het laatste blokje.  
-Pas dan de naam en ingrediënten aan.
-
-> ⚠️ Vergeet de komma `,` niet na het sluitende `}`!
+Pasta werkt hetzelfde, maar daar staat `detail` in plaats van `ingredienten`.
 
 ---
 
-## 2. Pasta aanpassen (`js.js`)
+## Prijzen aanpassen
 
-Zoek naar `pasta: [`. Werkt hetzelfde als pizza, maar met `detail` in plaats van `ingredienten`:
-
-```js
-{ 
-    naam: "Carbonara", 
-    detail: "Spek in kaassaus" 
-},
-```
-
----
-
-## 3. Prijzen aanpassen (`js.js`)
-
-Zoek onderaan `js.js` naar:
+Ook in [`js.js`](js.js), zoek naar:
 
 ```js
 pizzaPrijzen: { small: 8.95, medium: 10.95, large: 13.95 },
-pizzaPrijzenOpDinsdag: { small: 7.95, medium: 9.95, large: 12.95 },
+afhaalActieDinsdag: { small: 7.95, medium: 9.95, large: 12.95 },
 pastaPrijzen: { afhaal: 10.95, levering: 12.95 },
+toppingPrijzen: { small: 1.00, medium: 1.50, large: 2.00 },
+vleesSupplementPrijzen: { small: 1.50, medium: 2.00, large: 2.50 },
 ```
 
-Verander gewoon het getal na de `:`.  
-Gebruik een punt `.` als decimaalteken, geen komma.
+Verander het getal na de `:`. Gebruik altijd een punt als decimaalteken, geen komma — dus `8.95` en niet `8,95`.
 
 ---
 
-## 4. Toppings aanpassen (`js.js`)
+## Toppings aanpassen
 
-Zoek naar `toppings: [`. Elke topping staat tussen aanhalingstekens, gescheiden door een komma:
+In [`js.js`](js.js), zoek naar `toppings: [`:
 
 ```js
 toppings: [
-    "Champignons", "Paprika", "Ui",
-    ...
+    "Champignons", "Paprika", "Ui", ...
 ],
 ```
 
-**Topping toevoegen:** Schrijf `"NieuweTopping",` bij de rest.  
-**Topping verwijderen:** Verwijder de hele `"Naam",` inclusief komma.
+Topping toevoegen → schrijf `"NieuweTopping",` erbij.  
+Topping verwijderen → verwijder de naam inclusief de komma.
 
 ---
 
-## 5. Openingsuren aanpassen (`Openingsuren.html`)
+## Openingsuren aanpassen
 
-Open `Openingsuren.html` en zoek naar de blokjes zoals:
+Open [`Openingsuren.html`](Openingsuren.html) en zoek naar blokjes zoals:
 
 ```html
 <div class="dagRij">
@@ -99,102 +79,82 @@ Open `Openingsuren.html` en zoek naar de blokjes zoals:
 </div>
 ```
 
-Verander gewoon de tijden tussen de tweede `<span>` en `</span>`.
+Verander de tijd tussen de tweede `<span>` en `</span>`.
 
 ---
 
-## 6. Contactgegevens aanpassen (`Contact.html`)
+## Contactgegevens aanpassen
 
-Open `Contact.html`. Zoek naar de `<span>` met de info:
+Open [`Contact.html`](Contact.html). Het adres en BTW staan hier:
 
 ```html
 <span>Hoogstraat 33, 2800 Mechelen</span>
 <span>BE0660.660.763</span>
 ```
 
-Verander de tekst tussen de tags.
-
-Voor het telefoonnummer zoek je naar:
+Voor het telefoonnummer:
 ```html
 <a href="tel:+015336060">015 33 60 60</a>
 ```
-Verander beide nummers — het ene in `href=` en het zichtbare getal.
+Verander beide — het nummer in `href=` én het zichtbare getal.
 
 ---
 
-## 7. Bestelplatformen aanpassen (`DeliveryZones.html`)
+## Bestelplatformen aanpassen
 
-Zoek naar een blokje zoals:
+Open [`DeliveryZones.html`](DeliveryZones.html) en zoek naar:
 
 ```html
-<div class="dagRij">
-    <span>Deliveroo</span>
-    <a href="https://deliveroo.be/..." class="bestelBtn">Bestel →</a>
-</div>
+<span>Deliveroo</span>
+<a href="https://deliveroo.be/..." class="bestelBtn">Bestel →</a>
 ```
 
-Verander de link tussen `href="..."` naar de juiste URL.  
-De naam tussen `<span>` en `</span>` kan je ook aanpassen.
+Verander de link in `href="..."` naar de juiste URL van het platform.
 
 ---
 
-## 8. Achtergrondkleur aanpassen (`style.css`)
+## Achtergrond of kleuren aanpassen
 
-Open `style.css` en zoek naar:
+Open [`style.css`](style.css).
 
-```css
-background: #011701;
-```
+Achtergrond → zoek naar `background: #033a03` en verander de kleurcode.  
+Groene accenten → zoek naar `#4a7a00` en vervang die overal via **Ctrl+H**.
 
-Verander `#011701` naar een andere kleur.  
-Je kan kleuren vinden op [coolors.co](https://coolors.co) of [htmlcolorcodes.com](https://htmlcolorcodes.com).
+Kleuren vinden? Ga naar [coolors.co](https://coolors.co).
 
 ---
 
-## 9. De groene kleur aanpassen (`style.css`)
+## Foto's vervangen
 
-De groene kleur die overal gebruikt wordt is `#4a7a00`.  
-Doe in je code editor **Ctrl+H** (zoeken & vervangen) en vervang `#4a7a00` door een andere kleur.
-
----
-
-## 10. Foto's vervangen
-
-Zet je nieuwe foto in de map `images/`.  
-Open daarna het juiste HTML bestand en zoek naar:
+Zet je nieuwe foto in de map `images/`. Open daarna het juiste HTML bestand en zoek naar:
 
 ```html
-<img src="images/naamvandefoto.jpg" ...>
+<img src="images/naamvandefoto.jpg">
 ```
 
-Verander `naamvandefoto.jpg` naar de naam van jouw nieuwe foto.  
-Zorg dat de bestandsnaam exact klopt, inclusief hoofdletters.
+Verander de bestandsnaam naar die van jouw nieuwe foto. Let op hoofdletters — `Foto.jpg` is anders dan `foto.jpg`.
 
 ---
 
-## 11. Wijzigingen online zetten (GitHub)
+## Wijzigingen online zetten
 
-Nadat je iets hebt aangepast, open je een terminal en typ je:
+Na elke aanpassing, open een terminal en typ:
 
 ```bash
 git add .
-git commit -m "(tussen de aanhallings tekens schrijven wat u hebt aangepast)"
+git commit -m "wat heb je veranderd"
 git push
 ```
 
-Na 1-2 minuten is de site live op GitHub Pages.
+De site is na 1-2 minuten live.
 
 ---
 
 ## Veelgemaakte fouten
 
-| Fout | Oplossing |
+| Probleem | Oplossing |
 |---|---|
-| Site toont niks | Controleer of je een komma `,` vergeten bent na een `}` |
-| Foto laadt niet | Controleer de bestandsnaam, let op hoofdletters |
-| Prijs toont verkeerd | Gebruik een punt `.` als decimaalteken, geen komma |
-| Wijziging niet online | Vergeet niet `git push` te doen |
-
----
-
-*Vragen? Geef de foutmelding of het stukje code door en het wordt opgelost.*
+| Site toont niks | Komma vergeten na een `}` in [`js.js`](js.js) |
+| Foto laadt niet | Bestandsnaam klopt niet, let op hoofdletters |
+| Prijs toont verkeerd | Gebruik `.` niet `,` als decimaalteken |
+| Wijziging niet online | `git push` vergeten |
