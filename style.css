@@ -369,7 +369,7 @@ b {
 }
 
 .prijsRij span:last-child { 
-    color: #4a7a00; 
+    color: #ffffff; 
     font-weight: 500; 
 }
 .prijsRij small { 
@@ -435,7 +435,7 @@ b {
 }
 .itemPrijs { 
     font-size: 15px; 
-    color: #4a7a00; 
+    color: #ffffff; 
     font-weight: 500; 
     white-space: nowrap; 
     margin-left: 16px; }
