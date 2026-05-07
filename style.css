@@ -12,6 +12,8 @@
 body {
     font-family: 'Oswald', sans-serif;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     /*background-image: url('images/pexels-pixabay-326311.jpg');*/
     background: #033a03;
     background-image: none;
@@ -199,14 +201,6 @@ b {
     line-height: 1.8;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4); 
-    z-index: -1;
-}
 .imageBox{
     display: flex;
     flex-direction: row;
@@ -323,11 +317,12 @@ body::before {
 }
 /* MENU PAGINA */
 .menuWrapper {
+    flex: 1;
     display: grid;
     grid-template-columns: 220px 1fr 160px;
     grid-template-rows: 1fr auto;
     gap: 0;
-    min-height: calc(100vh - 90px);
+    min-height: 100vh;
 }
 
 #prijzenBlok {
