@@ -16,54 +16,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menu = {
         pizza: [
-            { naam: "Alpeross", ingredienten: "Looksaus bodem, kip, ui, schijfjes tomaat" },
-            { naam: "Al Capone", ingredienten: "Pepperoni, shoarma, jalapenos en ui" },
-            { naam: "BBQ Chicken", ingredienten: "Gegrilde kip, ui, paprika en mozzarella" },
-            { naam: "BBQ Meatballs", ingredienten: "Gegrilde gehaktballetjes, ui, paprika" },
-            { naam: "Bolognese", ingredienten: "Bolognesesaus, lookpoeder, ui en extra kaas" },
-            { naam: "Calzone", ingredienten: "Gevouwen pizza met ham, kaas, salami, paprika, champignons, bolognese" },
-            { naam: "Cheesy Mix", ingredienten: "Feta, gorgonzola, mozzarella en extra kaas" },
-            { naam: "Creamy Cheesy Mix", ingredienten: "Feta, gorgonzola, mozzarella en extra kaas" },
-            { naam: "Creamy Chicken", ingredienten: "Kaas, gekruide kip, ui en champignons" },
-            { naam: "Creamy Dream", ingredienten: "Spek, room, ui en look" },
-            { naam: "Curry Orient", ingredienten: "Gekruide kip, ui, ananas" },
-            { naam: "Don Salmon", ingredienten: "Gerookte zalm en ui" },
-            { naam: "Four Seasons", ingredienten: "Ham, salami, paprika, champignons" },
-            { naam: "Funky Chicken", ingredienten: "Ui, ananas, paprika en gekruide kip" },
-            { naam: "Fruitti Dimare", ingredienten: "Zeevruchten mix" },
-            { naam: "Hawaïan Shrimps", ingredienten: "Scampi's, ananas en maïs" },
-            { naam: "Hawaï", ingredienten: "Ham, gekruide kip en ananas" },
-            { naam: "Hot BBQ Chicken", ingredienten: "Gekruide kip, ui, paprika, feta, jalapenos" },
-            { naam: "Hot BBQ", ingredienten: "Shoarma, paprika, jalapenos" },
-            { naam: "Hot Lovers", ingredienten: "Jalapenos, pepperoni, paprika en ui" },
-            { naam: "King de Luxe", ingredienten: "Tonijn, paprika, ui en lookpoeder" },
-            { naam: "Meat Lovers", ingredienten: "Shoarma, ham, champignons en ui" },
-            { naam: "Meat Feast", ingredienten: "Ham, salami, kip, shoarma vlees" },
-            { naam: "Mega Fish", ingredienten: "Tonijn, ansjovis, champignons, ui" },
-            { naam: "Margarita", ingredienten: "Tomatensaus, kaas en mozzarella" },
-            { naam: "New Yorker", ingredienten: "Pepperoni, ham, shoarma, ui en paprika" },
-            { naam: "Rucola", ingredienten: "Tomatensaus, kerstomaat, pesto en rucola" },
-            { naam: "Scampi Mampi", ingredienten: "Scampi's, verse tomaten, ui en lookpoeder" },
-            { naam: "Shoarma", ingredienten: "Shoarma, paprika en lookpoeder" },
-            { naam: "Shoarma de Luxe", ingredienten: "Shoarma, paprika, champignons, ui en feta" },
-            { naam: "Spicy Fiesta", ingredienten: "Gekruide kip, jalapenos, ui, paprika en maïs" },
-            { naam: "Toni Pepperoni", ingredienten: "Dubbele portie pepperoni en mozzarella" },
-            { naam: "Tonno", ingredienten: "Tonijn, olijven en paprika" },
-            { naam: "Vegetarian", ingredienten: "Champignons, paprika, ui, olijven, maïs en schijfjes tomaat" },
-            { naam: "Fungi", ingredienten: "Champignon en kaas" },
-            { naam: "Prosciutto", ingredienten: "Ham en kaas" },
+            { naam: "Alpeross", ingredienten: "Looksaus bodem, kip, ui, schijfjes tomaat", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Al Capone", ingredienten: "Pepperoni, shoarma, jalapenos en ui", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.90, medium: 14.90, large: 18.90 } },
+            { naam: "BBQ Chicken", ingredienten: "Barbecuesaus, gegrilde kip, ui, paprika en mozzarella", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "BBQ Bacon", ingredienten: "Barbecuesaus, spek, uien en paprika", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "BBQ Kebap", ingredienten: "Barbecuesaus, kebab, ui en paprika", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "BBQ Meatballs", ingredienten: "Barbecuesaus, gegrilde gehaktballetjes, ui en paprika", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Bolognese", ingredienten: "Bolognesesaus, lookpoeder en ui", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Calzone", ingredienten: "Gevouwen pizza met ham, kaas, salami, paprika, champignons en bolognese", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.90, medium: 14.90, large: 18.90 } },
+            { naam: "Calzone Special", ingredienten: "Gevouwen pizza met kip, ui, paprika en schijfjes tomaat", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Cheesy Mix", ingredienten: "Feta, gorgonzola, mozzarella en extra kaas", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Creamy Cheesy Mix", ingredienten: "Roomsaus, feta, gorgonzola, mozzarella en extra kaas", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Creamy Chicken", ingredienten: "Roomsaus, kaas, gekruide kip, ui en champignons", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Creamy Dream", ingredienten: "Roomsaus, spek, room, ui en look", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Curry Oriënt", ingredienten: "Currysaus, gekruide kip, ui en ananas", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Don Salmon", ingredienten: "Roomsaus, gerookte zalm en ui", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 13.90, medium: 15.90, large: 18.90 } },
+            { naam: "Four Seasons", ingredienten: "Ham, salami, paprika en champignons", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.90, medium: 14.90, large: 18.90 } },
+            { naam: "Funky Chicken", ingredienten: "Ui, ananas, paprika en gekruide kip", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Frutti di Mare", ingredienten: "Zeevruchten mix", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 13.90, medium: 15.90, large: 18.90 } },
+            { naam: "Hawaï", ingredienten: "Ham, gekruide kip en ananas", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.90, medium: 14.90, large: 18.90 } },
+            { naam: "Hawaian Shrimps", ingredienten: "Scampi's, ananas en maïs", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 13.90, medium: 15.90, large: 18.90 } },
+            { naam: "Hot BBQ Chicken", ingredienten: "Barbecuesaus, gekruide kip, ui, paprika, feta en jalapenos", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Hot BBQ", ingredienten: "Barbecuesaus, shoarma, paprika en jalapenos", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Hot Lovers", ingredienten: "Jalapenos, pepperoni, paprika en ui", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "King de Luxe", ingredienten: "Tonijn, paprika, ui en lookpoeder", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Meat Lovers", ingredienten: "Shoarma, ham, champignons en ui", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.90, medium: 14.90, large: 18.90 } },
+            { naam: "Meat Feast", ingredienten: "Ham, salami, kip en shoarma vlees", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 13.90, medium: 15.90, large: 18.90 } },
+            { naam: "Mega Fish", ingredienten: "Tonijn, ansjovis, champignons en ui", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.90, medium: 14.90, large: 18.90 } },
+            { naam: "New Yorker", ingredienten: "Pepperoni, ham, shoarma, ui en paprika", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 13.90, medium: 15.90, large: 18.90 } },
+            { naam: "Rucola", ingredienten: "Tomatensaus, kerstomaat, pesto en rucola", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.95, medium: 13.95, large: 17.95 } },
+            { naam: "Shoarma", ingredienten: "Shoarma en paprika", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.95, medium: 13.95, large: 17.95 } },
+            { naam: "Scampi Mampi", ingredienten: "Scampi's, verse tomaten en ui", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 13.90, medium: 15.90, large: 18.90 } },
+            { naam: "Shoarma de Luxe", ingredienten: "Shoarma, paprika, champignons, ui en feta", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.95, medium: 14.95, large: 18.95 } },
+            { naam: "Spicy Fiesta", ingredienten: "Gekruide kip, jalapenos, ui, paprika en maïs", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Toni Pepperoni", ingredienten: "Dubbele portie pepperoni en mozzarella", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Tonno", ingredienten: "Tonijn, olijven en paprika", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.95, medium: 13.95, large: 17.95 } },
+            { naam: "Vegetarian", ingredienten: "Champignons, paprika, ui, olijven, maïs en schijfjes tomaat", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 12.50, medium: 14.50, large: 18.50 } },
+            { naam: "Margarita", ingredienten: "Tomatensaus, gouda kaas, mozzarella", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Fungi", ingredienten: "Champignons en tomatensaus", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
+            { naam: "Prosciutto", ingredienten: "Tomatensaus en gerookte ham", afhaal: { small: 8.95, medium: 10.95, large: 13.95 }, levering: { small: 11.90, medium: 13.90, large: 17.90 } },
         ],
         pasta: [
-            { naam: "King Salmone", detail: "Gerookte zalm, kaassaus, ui" },
-            { naam: "Pesto Chicken", detail: "Gekruide kip, pesto, roomsaus" },
-            { naam: "Scampi", detail: "Scampi's in kaassaus" },
-            { naam: "Carbonara", detail: "Spek in kaassaus" },
-            { naam: "Cremolati", detail: "Ham in kaassaus" },
-            { naam: "Scampi Curry", detail: "Chinees curry, ui, ananas, scampi" },
-            { naam: "Chicken Curry", detail: "Chinees curry, kip, ui, ananas" },
-            { naam: "Pollo", detail: "Kip, ui, kaassaus, paprika" },
-            { naam: "Pollo Hot", detail: "Kip, paprika, kaassaus, jalapeños" },
-            { naam: "BBQ Chicken", detail: "BBQ saus, kip, ui, paprika" },
+            { naam: "King Salmone", detail: "Gerookte zalm, kaassaus, ui", afhaal: 11.95, levering: 12.95 },
+            { naam: "Pesto Chicken", detail: "Gekruide kip, pesto, roomsaus", afhaal: 11.00, levering: 12.00 },
+            { naam: "Scampi", detail: "Scampi's in kaassaus", afhaal: 11.95, levering: 12.95 },
+            { naam: "Carbonara", detail: "Spek, kaas, kaassaus", afhaal: 11.00, levering: 12.00 },
+            { naam: "Cremolati", detail: "Ham, kaas, kaassaus", afhaal: 11.00, levering: 12.00 },
+            { naam: "Scampi Curry", detail: "Chinees curry, ui, ananas, scampi", afhaal: 11.95, levering: 12.95 },
+            { naam: "Chicken Curry", detail: "Chinees curry, kip, ui, ananas", afhaal: 11.00, levering: 12.00 },
+            { naam: "Pollo", detail: "Kip, paprika, champignon en kaassaus", afhaal: 11.00, levering: 12.00 },
+            { naam: "Pollo Hot", detail: "Kip, paprika, champignon, kaassaus en jalapeños", afhaal: 11.00, levering: 12.00 },
+            { naam: "BBQ Chicken", detail: "BBQ saus, kip, ui en paprika", afhaal: 11.00, levering: 12.00 },
         ],
         voorgerechten: [
             { naam: "Lookbaguette (2st)", detail: "+ kaas €0,50 | kaas & ham €1,00 | kaas & tomaat €1,00 + spek", prijs: 4.00 },
@@ -118,59 +121,39 @@ document.addEventListener("DOMContentLoaded", function () {
             "Mozzarella", "Feta", "Gorgonzola", "Extra Kaas",
             "Ananas", "Jalapeños", "Pesto", "Rucola"
         ],
-        pizzaPrijzen: {
-            small: 8.95, medium: 10.95, large: 13.95,
-            smallLevering: 9.95, mediumLevering: 11.95, largeLevering: 14.95
-        },
         afhaalActieDinsdag: { small: 7.95, medium: 9.95, large: 12.95 },
-        pastaPrijzen: { afhaal: 10.95, levering: 12.95 },
         deliveryZones: ["Mechelen", "Muizen"],
     };
 
-    const p = menu.pizzaPrijzen;
-    const pa = menu.pastaPrijzen;
-    const pd = menu.afhaalActieDinsdag;
     const tp = menu.toppingPrijzen;
     const vs = menu.vleesSupplementPrijzen;
+    const pd = menu.afhaalActieDinsdag;
 
-    // pizza prijzen met afhaal/levering tabs
+    let huidigeModus = "afhaal";
+
+    // enkel de knoppen, geen prijzen
     document.getElementById("pizzaPrijzen").innerHTML = `
         <div style="display:flex; gap:6px; margin-bottom:12px;">
-            <button onclick="toonPizzaPrijs('afhaal')" id="btnAfhaal"
+            <button onclick="toonModus('afhaal')" id="btnAfhaal"
                 style="flex:1; padding:6px; background:#4a7a00; border:none; color:white; border-radius:6px; cursor:pointer; font-family:Oswald,sans-serif; font-size:11px; letter-spacing:1px;">
                 AFHAAL
             </button>
-            <button onclick="toonPizzaPrijs('levering')" id="btnLevering"
+            <button onclick="toonModus('levering')" id="btnLevering"
                 style="flex:1; padding:6px; background:transparent; border:0.5px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.5); border-radius:6px; cursor:pointer; font-family:Oswald,sans-serif; font-size:11px; letter-spacing:1px;">
                 LEVERING
             </button>
         </div>
-        <p class="blokTitel">Pizza's</p>
-        <div id="pizzaPrijsAfhaal">
-            <div class="prijsRij"><span>Small</span><span>€${p.small.toFixed(2)}</span></div>
-            <div class="prijsRij"><span>Medium</span><span>€${p.medium.toFixed(2)}</span></div>
-            <div class="prijsRij"><span>Large</span><span>€${p.large.toFixed(2)}</span></div>
-        </div>
-        <div id="pizzaPrijsLevering" style="display:none;">
-            <div class="prijsRij"><span>Small</span><span>€${p.smallLevering.toFixed(2)}</span></div>
-            <div class="prijsRij"><span>Medium</span><span>€${p.mediumLevering.toFixed(2)}</span></div>
-            <div class="prijsRij"><span>Large</span><span>€${p.largeLevering.toFixed(2)}</span></div>
-        </div>
     `;
 
-    // dolle dinsdag actie
+    // pasta prijzen blok leeg
+    document.getElementById("pastaPrijzen").innerHTML = ``;
+
+    // dolle dinsdag
     document.getElementById("afhaalActieDinsdag").innerHTML = `
         <br><p class="blokTitel">Dolle Dinsdag Afhaal</p>
         <div class="prijsRij"><span>Small</span><span>€${pd.small.toFixed(2)}</span></div>
         <div class="prijsRij"><span>Medium</span><span>€${pd.medium.toFixed(2)}</span></div>
         <div class="prijsRij"><span>Large</span><span>€${pd.large.toFixed(2)}</span></div>
-    `;
-
-    // pasta prijzen
-    document.getElementById("pastaPrijzen").innerHTML = `
-        <p class="blokTitel" style="margin-top:24px;">Pasta's</p>
-        <div class="prijsRij"><span>Afhaal</span><span>€${pa.afhaal.toFixed(2)}</span></div>
-        <div class="prijsRij"><span>Levering</span><span>€${pa.levering.toFixed(2)}</span></div>
     `;
 
     // bodems + sauzen
@@ -186,46 +169,67 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="sauzenRij">${menu.sauzen.map(s => `<span class="sausTag">${s}</span>`).join("")}</div>
     `;
 
-    // toppings met S/M/L prijzen + vlees supplement
+    // toppings
     document.getElementById("toppingsBlok").innerHTML = `
         <p class="blokTitel" style="margin-top:24px;">Toppings</p>
         <div class="prijsRij"><span>Small</span><span>€${tp.small.toFixed(2)}</span></div>
         <div class="prijsRij"><span>Medium</span><span>€${tp.medium.toFixed(2)}</span></div>
         <div class="prijsRij"><span>Large</span><span>€${tp.large.toFixed(2)}</span></div>
-
         <p class="blokTitel" style="margin-top:16px;">Vlees toppings</p>
         <div class="prijsRij"><span>Small</span><span>€${vs.small.toFixed(2)}</span></div>
         <div class="prijsRij"><span>Medium</span><span>€${vs.medium.toFixed(2)}</span></div>
         <div class="prijsRij"><span>Large</span><span>€${vs.large.toFixed(2)}</span></div>
-
         <p class="blokTitel" style="margin-top:16px;">Alle toppings</p>
         <div class="toppingGrid">${menu.toppings.map(t => `<span class="toppingTag">${t}</span>`).join("")}</div>
     `;
-    // pizza lijst
-    document.getElementById("pizzaLijst").innerHTML = `
-        <p class="categorieTitel">Pizza's</p>
-        ${menu.pizza.map(p => `
-            <div class="menuRij">
-                <div>
-                    <div class="itemNaam">${p.naam}</div>
-                    <div class="itemDetail">${p.ingredienten}</div>
-                </div>
-            </div>
-        `).join("")}
-    `;
 
-    // pasta lijst
-    document.getElementById("pastaLijst").innerHTML = `
-        <p class="categorieTitel" style="margin-top:32px;">Pasta's</p>
-        ${menu.pasta.map(p => `
-            <div class="menuRij">
-                <div>
-                    <div class="itemNaam">${p.naam}</div>
-                    <div class="itemDetail">${p.detail}</div>
+    // pizza lijst met dropdown per item
+    function renderPizzaLijst(modus) {
+        document.getElementById("pizzaLijst").innerHTML = `
+            <p class="categorieTitel">Pizza's</p>
+            ${menu.pizza.map((p, i) => `
+                <div class="menuRij" style="flex-direction:column; align-items:flex-start; cursor:pointer;" onclick="toggleDropdown('pizza-${i}')">
+                    <div style="display:flex; justify-content:space-between; width:100%; align-items:center;">
+                        <div>
+                            <div class="itemNaam">${p.naam}</div>
+                            <div class="itemDetail">${p.ingredienten}</div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <div class="itemPrijs">
+                                vanaf €${modus === 'afhaal' ? p.afhaal.small.toFixed(2) : p.levering.small.toFixed(2)}
+                            </div>
+                            <span style="color:rgba(255,255,255,0.4); font-size:18px;">+</span>
+                        </div>
+                    </div>
+                    <div id="pizza-${i}" style="display:none; width:100%; margin-top:10px; padding-top:10px; border-top:0.5px solid rgba(255,255,255,0.06);">
+                        <div class="prijsRij"><span>Small</span><span>€${modus === 'afhaal' ? p.afhaal.small.toFixed(2) : p.levering.small.toFixed(2)}</span></div>
+                        <div class="prijsRij"><span>Medium</span><span>€${modus === 'afhaal' ? p.afhaal.medium.toFixed(2) : p.levering.medium.toFixed(2)}</span></div>
+                        <div class="prijsRij"><span>Large</span><span>€${modus === 'afhaal' ? p.afhaal.large.toFixed(2) : p.levering.large.toFixed(2)}</span></div>
+                    </div>
                 </div>
-            </div>
-        `).join("")}
-    `;
+            `).join("")}
+        `;
+    }
+
+    // pasta lijst met afhaal/levering prijs
+    function renderPastaLijst(modus) {
+        document.getElementById("pastaLijst").innerHTML = `
+            <p class="categorieTitel" style="margin-top:32px;">Pasta's</p>
+            ${menu.pasta.map(p => `
+                <div class="menuRij">
+                    <div>
+                        <div class="itemNaam">${p.naam}</div>
+                        <div class="itemDetail">${p.detail}</div>
+                    </div>
+                    <div class="itemPrijs">€${modus === 'afhaal' ? p.afhaal.toFixed(2) : p.levering.toFixed(2)}</div>
+                </div>
+            `).join("")}
+        `;
+    }
+
+    // eerste render
+    renderPizzaLijst("afhaal");
+    renderPastaLijst("afhaal");
 
     // voorgerechten
     document.getElementById("voorgerechtenLijst").innerHTML = `
@@ -274,27 +278,31 @@ document.addEventListener("DOMContentLoaded", function () {
         `).join("")}
     `;
 
-    // tab functie voor afhaal/levering
-    window.toonPizzaPrijs = function(type) {
-        const afhaal = document.getElementById("pizzaPrijsAfhaal");
-        const levering = document.getElementById("pizzaPrijsLevering");
+    // toggle dropdown per pizza
+    window.toggleDropdown = function(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === "none" ? "block" : "none";
+    };
+
+    // wissel afhaal/levering — update alles tegelijk
+    window.toonModus = function(type) {
+        huidigeModus = type;
         const btnAfhaal = document.getElementById("btnAfhaal");
         const btnLevering = document.getElementById("btnLevering");
 
         if (type === "afhaal") {
-            afhaal.style.display = "block";
-            levering.style.display = "none";
             btnAfhaal.style.background = "#4a7a00";
             btnAfhaal.style.color = "white";
             btnLevering.style.background = "transparent";
             btnLevering.style.color = "rgba(255,255,255,0.5)";
         } else {
-            afhaal.style.display = "none";
-            levering.style.display = "block";
             btnLevering.style.background = "#4a7a00";
             btnLevering.style.color = "white";
             btnAfhaal.style.background = "transparent";
             btnAfhaal.style.color = "rgba(255,255,255,0.5)";
         }
+
+        renderPizzaLijst(type);
+        renderPastaLijst(type);
     };
 });
