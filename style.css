@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Oswald', sans-serif;
+    min-height: 100vh;
     /*background-image: url('images/pexels-pixabay-326311.jpg');*/
     background: #033a03;
     background-image: none;
