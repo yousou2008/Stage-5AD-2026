@@ -548,11 +548,16 @@ body::before {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding: 8px;
         gap: 15px;
     }
     .rounded{
-        width: 90%;
+        width: 95%;
         max-width: 100%;
+    }
+    .imageBox .rounded{
+        width: 80%;
+        height: 45%;
     }
     b {
         font-size: clamp(20px, 6vw, 50px);
@@ -575,7 +580,13 @@ body::before {
     #menuItems { 
         border-right: none;
         padding: 24px 16px;
+        overflow-y: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
     }
+    #menuItems::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Android */
+}
     /* # is een id selector dus ge maakt geen nieuwe class aan maar ge voegt css op een bestaant id het kan maar 1 keer gebruikt worden*/
     #zonesBlok { 
         border-top: 0.5px solid rgba(255,255,255,0.08);
@@ -602,7 +613,7 @@ body::before {
         height: 60px;
         }
     .rounded{
-        width: 90%;
+        width: 95%;
         max-width: 100%
     }
     .toRight {
